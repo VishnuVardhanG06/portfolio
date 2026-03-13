@@ -1,0 +1,63 @@
+import { resume } from "@/data/resume";
+import { Section } from "@/components/sections/Section";
+import { Timeline, type TimelineItem } from "@/components/sections/Timeline";
+import { Card } from "@/components/ui/Card";
+
+export const metadata = {
+  title: "Experience Timeline",
+  description: "Timeline-style view of education, projects, and community involvement.",
+};
+
+export default function ExperiencePage() {
+  const items: TimelineItem[] = [
+    {
+      title: resume.education[0]?.institution || "Education",
+      subtitle: resume.education[0]?.degree,
+      dates: resume.education[0]?.dates || "",
+      bullets: [
+        resume.education[0]?.score ? `Academic performance: ${resume.education[0]?.score}` : "Academic track in progress.",
+        "Focus areas: machine learning, computer vision, data analytics, and applied data systems.",
+      ],
+      tags: ["B.Tech", "Data Science"],
+    },
+    ...resume.projects.map((p) => ({
+      title: p.name,
+      subtitle: "Project work",
+      dates: "Ongoing",
+      bullets: p.highlights,
+      tags: p.technologies.slice(0, 6),
+    })),
+    {
+      title: "Professional experience",
+      subtitle: "Not listed on the CV",
+      dates: "—",
+      bullets: [
+        "No formal industry experience included in the current resume.",
+        "Portfolio highlights emphasize project ownership, research interests, and applied builds.",
+      ],
+    },
+  ];
+
+  return (
+    <div>
+      <Section
+        eyebrow="Timeline"
+        title="A compact view of my path"
+        subtitle="Education + projects + community involvement in a single scroll."
+      >
+        <Timeline items={items} />
+      </Section>
+
+      <Section eyebrow="Activities" title="Community & clubs" subtitle="Groups and events from the resume.">
+        <div className="grid gap-4 md:grid-cols-2">
+          {resume.activities.map((a) => (
+            <Card key={a}>
+              <div className="text-sm font-semibold text-neutral-950 dark:text-white">{a}</div>
+            </Card>
+          ))}
+        </div>
+      </Section>
+    </div>
+  );
+}
+

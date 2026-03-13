@@ -1,0 +1,60 @@
+import { resume } from "@/data/resume";
+import { Section } from "@/components/sections/Section";
+import { Card } from "@/components/ui/Card";
+import { ContactForm } from "@/components/sections/ContactForm";
+
+export const metadata = {
+  title: "Contact",
+  description: "Contact form and direct links.",
+};
+
+export default function ContactPage() {
+  return (
+    <div>
+      <Section
+        eyebrow="Contact"
+        title="Let’s build something useful"
+        subtitle="Reach out for research collaborations, internships, or project discussions."
+      >
+        <div className="grid gap-4 md:grid-cols-3">
+          <Card className="md:col-span-2">
+            <div className="font-display text-lg font-semibold text-neutral-950 dark:text-white">Message me</div>
+            <p className="mt-2 text-sm text-neutral-700 dark:text-white/70">
+              On GitHub Pages, the form opens your email client by default. If you want direct form delivery, set
+              `NEXT_PUBLIC_CONTACT_ENDPOINT` to a hosted form endpoint (Formspree, etc.).
+            </p>
+            <div className="mt-5">
+              <ContactForm />
+            </div>
+          </Card>
+          <Card>
+            <div className="font-display text-lg font-semibold text-neutral-950 dark:text-white">Direct</div>
+            <div className="mt-3 space-y-2 text-sm text-neutral-700 dark:text-white/70">
+              <div>
+                <span className="font-semibold text-neutral-950 dark:text-white">Email:</span>{" "}
+                <a className="hover:underline" href={`mailto:${resume.contact.email}`}>
+                  {resume.contact.email}
+                </a>
+              </div>
+              <div>
+                <span className="font-semibold text-neutral-950 dark:text-white">Phone:</span> {resume.contact.phone}
+              </div>
+              <div>
+                <span className="font-semibold text-neutral-950 dark:text-white">LinkedIn:</span>{" "}
+                <a className="hover:underline" href={resume.links.linkedin} target="_blank" rel="noreferrer">
+                  {resume.links.linkedin.replace("https://", "")}
+                </a>
+              </div>
+              <div>
+                <span className="font-semibold text-neutral-950 dark:text-white">GitHub:</span>{" "}
+                <a className="hover:underline" href={resume.links.github} target="_blank" rel="noreferrer">
+                  {resume.links.github.replace("https://", "")}
+                </a>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </Section>
+    </div>
+  );
+}

@@ -1,0 +1,70 @@
+GADDAM VISHNU VARDHAN
+Hyderabad, India
+Phone: +91 8919300168 | Email: vishnuvardhangaddam714@gmail.com
+LinkedIn: linkedin.com/in/gaddam-vishnu-vardhan-6840a02a5
+GitHub: github.com/VishnuVardhanG06
+Research Interests
+Machine Learning, Artificial Intelligence, Computer Vision, Remote Sensing, Data Analytics
+Summary
+Data Science undergraduate interested in research at the intersection of artificial intelligence and real-world
+data problems. Experienced in building machine learning applications, geospatial analysis tools, and
+AI-driven data systems. Seeking research opportunities to contribute to data-driven solutions in machine
+learning, computer vision, and geospatial intelligence.
+Education
+B. Tech – Computer Science and Engineering (Data Science), Vignana Bharathi Institute of Technology
+(2023–2027) – CGPA: 8.2/10
+Intermediate (MPC), Narayana Junior College – 92.8%
+SSC, Narayana High School – 100%
+Technical Skills
+• Programming: Python, R, SQL, C
+• Machine Learning: Scikit-learn, TensorFlow, PyTorch
+• Data Analysis: Pandas, NumPy
+• Computer Vision: OpenCV, Image Processing
+• Data Visualization: Matplotlib, Seaborn, Power BI, Tableau
+• Tools: Git, Jupyter Notebook, Google Colab, VS Code, SQLite
+Projects
+Urban Growth Detection Using Satellite Imagery
+• Built a geospatial analysis system to detect urban expansion using satellite imagery.
+• Applied remote sensing indices (NDVI, NDBI, MNDWI) for land-use classification.
+• Used Google Earth Engine with Landsat datasets for satellite data processing.
+• Developed a web interface to visualize urban growth patterns.
+• Technologies: Python, Google Earth Engine, Flask, HTML, CSS, JavaScript
+DataQueryAI – Natural Language Data Query System
+• Developed an AI application allowing users to query tabular datasets using natural language.
+• Integrated TAPAS transformer model for table-based question answering.
+• Built an interface for dataset upload, preview, and automated query responses.
+• Technologies: Python, Streamlit, Pandas, SQLite, HuggingFace Transformers
+Velocity Suite – Market Intelligence Platform
+• Built a full-stack platform for collecting and analyzing real-time web data.
+• Implemented automated web scraping pipelines with structured data validation.
+• Designed a dashboard displaying market insights and analytics.
+• Technologies: Python, Node.js, FastAPI, Playwright, SQLite, Tailwind CSS
+Plant Disease Detection System
+• Developed an end-to-end ML pipeline to identify 8+ distinct crop diseases using leaf images.
+• Implemented HOG feature extraction and optimized Random Forest and SVM classifiers for high
+accuracy.
+• Built an interactive Flask web application with real-time image analysis and glass morphism UI.
+• Integrated a dynamic knowledge base providing automated symptoms, prevention, and treatment
+advice.
+• Technologies: Python, Flask, scikit-learn, OpenCV, HOG, JavaScript, CSS3
+
+-- 1 of 2 --
+
+Certifications
+• AWS Academy Graduate – AWS Cloud Foundations
+• Python Programming Certification – Cisco
+• C Programming Certification – Cisco
+• GenAI Powered Data Analytics Job Simulation – Tata Group (Forage)
+• Technology Job Simulation – Deloitte Australia (Forage)
+Activities
+• Member – Computer Society of India (CSI)
+• Member – Institution of Engineers (India)
+• Member – Robotics Club, Vignana Bharathi Institute of Technology
+• Participant – GenAI Hackathon organized by Google Developer Groups and other innovative
+hackathons.
+Languages
+• English – Professional
+• Telugu – Native
+• Hindi – Conversational
+
+-- 2 of 2 --
