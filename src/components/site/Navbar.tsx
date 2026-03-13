@@ -22,12 +22,12 @@ export function Navbar({ className }: { className?: string }) {
     <header className={cn("sticky top-0 z-40 border-b border-white/10 bg-black/25 backdrop-blur", className)}>
       <div className="mx-auto flex min-h-16 max-w-6xl items-center justify-between px-4 py-3">
         <div className="flex items-center gap-3">
-          <Link href="/" className="group flex flex-col leading-tight">
-            <span className="font-display text-base font-semibold tracking-tight text-white sm:text-lg">
-              {resume.fullName}
+          <Link href="/" className="group inline-flex items-center gap-3">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-400 via-blue-500 to-fuchsia-500 text-sm font-extrabold text-white shadow-sm">
+              V
             </span>
-            <span className="max-w-[62vw] truncate text-xs font-semibold text-white/60 group-hover:text-white/80 sm:max-w-[42vw] sm:text-sm">
-              {resume.title}
+            <span className="max-w-[52vw] truncate font-display text-base font-semibold tracking-tight text-white group-hover:text-white sm:max-w-[34vw] sm:text-lg">
+              {resume.fullName}
             </span>
           </Link>
         </div>
