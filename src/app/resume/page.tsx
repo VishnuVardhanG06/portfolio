@@ -24,27 +24,27 @@ export default function ResumePage() {
 
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           <Card className="md:col-span-2">
-            <div className="font-display text-2xl font-semibold text-neutral-950 dark:text-white">{resume.fullName}</div>
-            <div className="mt-1 text-sm text-neutral-700 dark:text-white/70">{resume.title}</div>
-            <div className="mt-4 text-sm text-neutral-700 dark:text-white/70">{resume.summary}</div>
+            <div className="font-display text-2xl font-semibold text-white">{resume.fullName}</div>
+            <div className="mt-1 text-sm text-white/70">{resume.title}</div>
+            <div className="mt-4 text-sm text-white/70">{resume.summary}</div>
 
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               <div>
-                <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">Projects</div>
-                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-neutral-700 dark:text-white/70">
+                <div className="font-display text-base font-semibold text-white">Projects</div>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-white/70">
                   {resume.projects.map((p) => (
                     <li key={p.slug}>
-                      <span className="font-semibold text-neutral-950 dark:text-white">{p.name}:</span> {p.highlights[0]}
+                      <span className="font-semibold text-white">{p.name}:</span> {p.highlights[0]}
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">Education</div>
-                <ul className="mt-2 space-y-2 text-sm text-neutral-700 dark:text-white/70">
+                <div className="font-display text-base font-semibold text-white">Education</div>
+                <ul className="mt-2 space-y-2 text-sm text-white/70">
                   {resume.education.map((e) => (
                     <li key={`${e.institution}-${e.degree}`}>
-                      <div className="font-semibold text-neutral-950 dark:text-white">{e.degree}</div>
+                      <div className="font-semibold text-white">{e.degree}</div>
                       <div>
                         {e.institution}
                         {e.dates ? ` · ${e.dates}` : ""}
@@ -59,24 +59,24 @@ export default function ResumePage() {
 
           <div className="grid gap-4">
             <Card>
-              <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">Contact</div>
-              <div className="mt-2 text-sm text-neutral-700 dark:text-white/70">
+              <div className="font-display text-base font-semibold text-white">Contact</div>
+              <div className="mt-2 text-sm text-white/70">
                 <div>
-                  <span className="font-semibold text-neutral-950 dark:text-white">Email:</span>{" "}
+                  <span className="font-semibold text-white">Email:</span>{" "}
                   <a className="hover:underline" href={`mailto:${resume.contact.email}`}>
                     {resume.contact.email}
                   </a>
                 </div>
                 <div>
-                  <span className="font-semibold text-neutral-950 dark:text-white">Phone:</span> {resume.contact.phone}
+                  <span className="font-semibold text-white">Phone:</span> {resume.contact.phone}
                 </div>
                 <div>
-                  <span className="font-semibold text-neutral-950 dark:text-white">Location:</span> {resume.location}
+                  <span className="font-semibold text-white">Location:</span> {resume.location}
                 </div>
               </div>
             </Card>
             <Card>
-              <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">Core skills</div>
+              <div className="font-display text-base font-semibold text-white">Core skills</div>
               <div className="mt-3 flex flex-wrap gap-2">
                 {[...resume.skills.programming, ...resume.skills.machineLearning, ...resume.skills.computerVision]
                   .slice(0, 12)
@@ -86,8 +86,8 @@ export default function ResumePage() {
               </div>
             </Card>
             <Card>
-              <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">Certifications</div>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-neutral-700 dark:text-white/70">
+              <div className="font-display text-base font-semibold text-white">Certifications</div>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-white/70">
                 {resume.certifications.map((c) => (
                   <li key={c}>{c}</li>
                 ))}

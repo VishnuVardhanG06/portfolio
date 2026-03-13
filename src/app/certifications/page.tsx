@@ -14,7 +14,7 @@ export default function CertificationsPage() {
         <div className="grid gap-4 md:grid-cols-2">
           {resume.certifications.map((c) => (
             <Card key={c}>
-              <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">{c}</div>
+              <div className="font-display text-base font-semibold text-white">{c}</div>
             </Card>
           ))}
         </div>
@@ -22,4 +22,3 @@ export default function CertificationsPage() {
     </div>
   );
 }
-

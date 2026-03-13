@@ -37,16 +37,18 @@ export function Modal({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.98 }}
             transition={{ duration: 0.18 }}
-            className={cn("relative w-full max-w-2xl rounded-2xl bg-white p-6 shadow-xl dark:bg-neutral-950")}
+            className={cn(
+              "relative w-full max-w-2xl rounded-2xl border border-white/10 bg-black/70 p-6 shadow-xl backdrop-blur",
+            )}
             role="dialog"
             aria-modal="true"
             aria-label={title}
           >
             <div className="mb-4 flex items-start justify-between gap-4">
-              <div className="font-display text-lg font-semibold text-neutral-950 dark:text-white">{title}</div>
+              <div className="font-display text-lg font-semibold text-white">{title}</div>
               <button
                 type="button"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 text-neutral-800 hover:bg-black/5 dark:border-white/10 dark:text-white dark:hover:bg-white/10"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/80 hover:bg-white/10 hover:text-white"
                 onClick={() => onOpenChange(false)}
                 aria-label="Close"
               >
@@ -60,4 +62,3 @@ export function Modal({
     </AnimatePresence>
   );
 }
-

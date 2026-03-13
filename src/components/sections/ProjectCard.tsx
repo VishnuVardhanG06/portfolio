@@ -15,21 +15,21 @@ export function ProjectCard({
   href?: string;
 }) {
   return (
-    <Card className="group h-full transition hover:-translate-y-0.5 hover:border-black/20 dark:hover:border-white/20">
+    <Card className="group h-full transition hover:-translate-y-0.5 hover:border-white/20">
       <div className="flex items-start justify-between gap-4">
         <div className="space-y-1">
           <div className="flex items-center gap-2">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-950 text-white dark:bg-white dark:text-black">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-sky-400/20 via-blue-500/20 to-fuchsia-500/20 text-white">
               <Layers className="h-4 w-4" />
             </span>
-            <h3 className="font-display text-lg font-semibold text-neutral-950 dark:text-white">{name}</h3>
+            <h3 className="font-display text-lg font-semibold text-white">{name}</h3>
           </div>
-          <div className="text-sm text-neutral-600 dark:text-white/60">Selected build highlights</div>
+          <div className="text-sm text-white/60">Selected build highlights</div>
         </div>
         {href ? (
           <a
             href={href}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 text-neutral-800 transition hover:bg-black/5 dark:border-white/10 dark:text-white dark:hover:bg-white/10"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/80 transition hover:bg-white/10 hover:text-white"
             aria-label={`Open ${name}`}
           >
             <ArrowUpRight className="h-4 w-4" />
@@ -37,7 +37,7 @@ export function ProjectCard({
         ) : null}
       </div>
 
-      <ul className="mt-4 space-y-2 text-sm text-neutral-700 dark:text-white/70">
+      <ul className="mt-4 space-y-2 text-sm text-white/70">
         {highlights.slice(0, 4).map((h) => (
           <li key={h} className="leading-6">
             {h}
@@ -53,4 +53,3 @@ export function ProjectCard({
     </Card>
   );
 }
-

@@ -8,11 +8,10 @@ export default function NotFound() {
     <Section eyebrow="404" title="Page not found" subtitle="The page you’re looking for doesn’t exist (or moved).">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
         <ButtonLink href="/">Back home</ButtonLink>
-        <Link href="/projects" className="text-sm font-semibold text-neutral-700 hover:text-neutral-950 dark:text-white/70 dark:hover:text-white">
+        <Link href="/projects" className="text-sm font-semibold text-white/70 hover:text-white">
           View projects
         </Link>
       </div>
     </Section>
   );
 }
-

@@ -8,10 +8,10 @@ type ButtonSize = "sm" | "md" | "lg";
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-neutral-950 text-white shadow-sm hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-white/90",
+    "bg-gradient-to-r from-sky-400 via-blue-500 to-fuchsia-500 text-white shadow-sm hover:brightness-110",
   secondary:
-    "border border-black/10 bg-white/70 text-neutral-950 shadow-sm backdrop-blur hover:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10",
-  ghost: "text-neutral-800 hover:bg-black/5 dark:text-white/80 dark:hover:bg-white/10",
+    "border border-white/10 bg-white/5 text-white shadow-sm backdrop-blur hover:bg-white/10",
+  ghost: "text-white/80 hover:bg-white/10",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
@@ -29,7 +29,7 @@ export function Button({
   return (
     <button
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/30 disabled:cursor-not-allowed disabled:opacity-60 dark:focus-visible:ring-white/30",
+        "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition disabled:cursor-not-allowed disabled:opacity-60",
         variantClasses[variant],
         sizeClasses[size],
         className,
@@ -54,7 +54,7 @@ export function ButtonLink({
     <Link
       href={href}
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/30 dark:focus-visible:ring-white/30",
+        "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition",
         variantClasses[variant],
         sizeClasses[size],
         className,
@@ -63,4 +63,3 @@ export function ButtonLink({
     />
   );
 }
-

@@ -16,14 +16,14 @@ export default function BlogPage() {
       >
         <div className="grid gap-4 md:grid-cols-2">
           <Card>
-            <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">How I evaluate models</div>
-            <p className="mt-2 text-sm text-neutral-700 dark:text-white/70">
+            <div className="font-display text-base font-semibold text-white">How I evaluate models</div>
+            <p className="mt-2 text-sm text-white/70">
               A practical checklist: baselines, splits, leakage traps, and the metrics that actually matter.
             </p>
           </Card>
           <Card>
-            <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">Remote sensing indices</div>
-            <p className="mt-2 text-sm text-neutral-700 dark:text-white/70">
+            <div className="font-display text-base font-semibold text-white">Remote sensing indices</div>
+            <p className="mt-2 text-sm text-white/70">
               NDVI, NDBI, MNDWI: when to use them, where they break, and how I validate outputs.
             </p>
           </Card>

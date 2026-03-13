@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/site/ThemeProvider";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { resume } from "@/data/resume";
+import { SpaceBackground } from "@/components/background/SpaceBackground";
 
 const displayFont = Sora({
   variable: "--font-display",
@@ -55,6 +56,7 @@ export default function RootLayout({
       <body className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable} antialiased`}>
         <ThemeProvider>
           <div className="min-h-dvh">
+            <SpaceBackground />
             <Navbar />
             <main>{children}</main>
             <Footer />

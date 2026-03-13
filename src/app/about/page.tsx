@@ -19,10 +19,10 @@ export default function AboutPage() {
       >
         <div className="grid gap-4 md:grid-cols-3">
           <Card className="md:col-span-2">
-            <div className="font-display text-lg font-semibold text-neutral-950 dark:text-white">Summary</div>
-            <p className="mt-3 text-base leading-7 text-neutral-700 dark:text-white/70">{resume.summary}</p>
+            <div className="font-display text-lg font-semibold text-white">Summary</div>
+            <p className="mt-3 text-base leading-7 text-white/70">{resume.summary}</p>
 
-            <div className="mt-6 font-display text-lg font-semibold text-neutral-950 dark:text-white">Research interests</div>
+            <div className="mt-6 font-display text-lg font-semibold text-white">Research interests</div>
             <div className="mt-3 flex flex-wrap gap-2">
               {resume.researchInterests.map((item) => (
                 <Badge key={item}>{item}</Badge>
@@ -31,19 +31,19 @@ export default function AboutPage() {
           </Card>
 
           <Card>
-            <div className="font-display text-lg font-semibold text-neutral-950 dark:text-white">Contact</div>
-            <div className="mt-3 space-y-2 text-sm text-neutral-700 dark:text-white/70">
+            <div className="font-display text-lg font-semibold text-white">Contact</div>
+            <div className="mt-3 space-y-2 text-sm text-white/70">
               <div>
-                <span className="font-semibold text-neutral-950 dark:text-white">Email:</span>{" "}
+                <span className="font-semibold text-white">Email:</span>{" "}
                 <a className="hover:underline" href={`mailto:${resume.contact.email}`}>
                   {resume.contact.email}
                 </a>
               </div>
               <div>
-                <span className="font-semibold text-neutral-950 dark:text-white">Phone:</span> {resume.contact.phone}
+                <span className="font-semibold text-white">Phone:</span> {resume.contact.phone}
               </div>
               <div>
-                <span className="font-semibold text-neutral-950 dark:text-white">Location:</span> {resume.location}
+                <span className="font-semibold text-white">Location:</span> {resume.location}
               </div>
             </div>
 
@@ -60,16 +60,16 @@ export default function AboutPage() {
       <Section eyebrow="Now" title="What I’m optimizing for" subtitle="The kind of work I enjoy and the environments where I do my best.">
         <div className="grid gap-4 md:grid-cols-2">
           <Card>
-            <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">Research-ready work</div>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-neutral-700 dark:text-white/70">
+            <div className="font-display text-base font-semibold text-white">Research-ready work</div>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-white/70">
               <li>Clear problem framing and measurable evaluation.</li>
               <li>Reproducible experiments and well-documented pipelines.</li>
               <li>Explainable insights over black-box demos.</li>
             </ul>
           </Card>
           <Card>
-            <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">Applied engineering</div>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-neutral-700 dark:text-white/70">
+            <div className="font-display text-base font-semibold text-white">Applied engineering</div>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-white/70">
               <li>Interfaces that make data products usable.</li>
               <li>Validation, monitoring, and practical constraints.</li>
               <li>Clean handoffs and maintainable code.</li>
@@ -80,4 +80,3 @@ export default function AboutPage() {
     </div>
   );
 }
-

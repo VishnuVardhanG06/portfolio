@@ -13,7 +13,7 @@ export default function ProjectsPage() {
       <Section
         eyebrow="Projects"
         title="Projects with real end-to-end ownership"
-        subtitle="From problem framing to implementation and UI. (Links can be added per project when available.)"
+        subtitle="From problem framing to implementation and UI."
       >
         <div className="grid gap-4 md:grid-cols-2">
           {resume.projects.map((p) => (
@@ -24,4 +24,3 @@ export default function ProjectsPage() {
     </div>
   );
 }
-

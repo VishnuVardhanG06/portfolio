@@ -4,7 +4,7 @@ export function Card({ className, children }: { className?: string; children: Re
   return (
     <div
       className={cn(
-        "rounded-2xl border border-black/10 bg-white/70 p-6 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5",
+        "rounded-2xl border border-white/10 bg-white/5 p-6 shadow-[0_1px_0_rgba(255,255,255,0.06)_inset] backdrop-blur",
         className,
       )}
     >
@@ -12,4 +12,3 @@ export function Card({ className, children }: { className?: string; children: Re
     </div>
   );
 }
-

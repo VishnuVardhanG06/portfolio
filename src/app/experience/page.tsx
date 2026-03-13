@@ -43,7 +43,7 @@ export default function ExperiencePage() {
         <div className="grid gap-4 md:grid-cols-2">
           {resume.activities.map((a) => (
             <Card key={a}>
-              <div className="text-sm font-semibold text-neutral-950 dark:text-white">{a}</div>
+              <div className="text-sm font-semibold text-white">{a}</div>
             </Card>
           ))}
         </div>

@@ -18,12 +18,12 @@ export default function AchievementsPage() {
         <div className="grid gap-4 md:grid-cols-2">
           {resume.achievements.map((a) => (
             <Card key={a}>
-              <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">{a}</div>
+              <div className="font-display text-base font-semibold text-white">{a}</div>
             </Card>
           ))}
           <Card>
-            <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">Additional signals</div>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-neutral-700 dark:text-white/70">
+            <div className="font-display text-base font-semibold text-white">Additional signals</div>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-white/70">
               <li>Active participation in clubs and hackathons (see Timeline).</li>
               <li>Strong project portfolio with end-to-end builds.</li>
             </ul>
@@ -33,4 +33,3 @@ export default function AchievementsPage() {
     </div>
   );
 }
-

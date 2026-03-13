@@ -56,35 +56,35 @@ export function ContactForm() {
   return (
     <form onSubmit={onSubmit} className="grid gap-4">
       <div className="grid gap-2 md:grid-cols-2">
-        <label className="grid gap-1 text-sm font-semibold text-neutral-900 dark:text-white">
+        <label className="grid gap-1 text-sm font-semibold text-white/90">
           Name
           <input
             name="name"
             required
-            className="h-11 rounded-xl border border-black/10 bg-white/80 px-3 text-sm text-neutral-900 shadow-sm outline-none focus:border-neutral-950/40 dark:border-white/10 dark:bg-white/5 dark:text-white dark:focus:border-white/30"
+            className="h-11 rounded-xl border border-white/10 bg-black/20 px-3 text-sm text-white shadow-sm outline-none placeholder:text-white/40 focus:border-sky-300/40"
             placeholder="Your name"
             autoComplete="name"
           />
         </label>
-        <label className="grid gap-1 text-sm font-semibold text-neutral-900 dark:text-white">
+        <label className="grid gap-1 text-sm font-semibold text-white/90">
           Email
           <input
             name="email"
             type="email"
             required
-            className="h-11 rounded-xl border border-black/10 bg-white/80 px-3 text-sm text-neutral-900 shadow-sm outline-none focus:border-neutral-950/40 dark:border-white/10 dark:bg-white/5 dark:text-white dark:focus:border-white/30"
+            className="h-11 rounded-xl border border-white/10 bg-black/20 px-3 text-sm text-white shadow-sm outline-none placeholder:text-white/40 focus:border-sky-300/40"
             placeholder="you@email.com"
             autoComplete="email"
           />
         </label>
       </div>
-      <label className="grid gap-1 text-sm font-semibold text-neutral-900 dark:text-white">
+      <label className="grid gap-1 text-sm font-semibold text-white/90">
         Message
         <textarea
           name="message"
           required
           rows={6}
-          className="rounded-xl border border-black/10 bg-white/80 p-3 text-sm text-neutral-900 shadow-sm outline-none focus:border-neutral-950/40 dark:border-white/10 dark:bg-white/5 dark:text-white dark:focus:border-white/30"
+          className="rounded-xl border border-white/10 bg-black/20 p-3 text-sm text-white shadow-sm outline-none placeholder:text-white/40 focus:border-sky-300/40"
           placeholder="What would you like to build or explore together?"
         />
       </label>
@@ -94,8 +94,8 @@ export function ContactForm() {
           Send message
         </Button>
         {status === "sending" ? <Loader /> : null}
-        {status === "sent" ? <div className="text-sm font-semibold text-emerald-700 dark:text-emerald-300">Sent. Thanks!</div> : null}
-        {status === "error" ? <div className="text-sm font-semibold text-red-700 dark:text-red-300">{error}</div> : null}
+        {status === "sent" ? <div className="text-sm font-semibold text-emerald-300">Sent. Thanks!</div> : null}
+        {status === "error" ? <div className="text-sm font-semibold text-red-300">{error}</div> : null}
       </div>
     </form>
   );

@@ -16,7 +16,7 @@ export function MobileMenu({ items, className }: { items: NavItem[]; className?:
     <div className={cn("relative sm:hidden", className)}>
       <button
         type="button"
-        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white/70 text-neutral-900 shadow-sm backdrop-blur transition hover:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
+        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white shadow-sm backdrop-blur transition hover:bg-white/10"
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Close menu" : "Open menu"}
       >
@@ -29,14 +29,14 @@ export function MobileMenu({ items, className }: { items: NavItem[]; className?:
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.18 }}
-            className="absolute right-0 top-12 z-50 w-56 rounded-2xl border border-black/10 bg-white/90 p-2 shadow-lg backdrop-blur dark:border-white/10 dark:bg-black/80"
+            className="absolute right-0 top-12 z-50 w-56 rounded-2xl border border-white/10 bg-black/70 p-2 shadow-lg backdrop-blur"
           >
             <nav className="flex flex-col">
               {items.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="rounded-xl px-3 py-2 text-sm font-medium text-neutral-900 hover:bg-black/5 dark:text-white dark:hover:bg-white/10"
+                  className="rounded-xl px-3 py-2 text-sm font-semibold text-white/80 hover:bg-white/10 hover:text-white"
                   onClick={() => setOpen(false)}
                 >
                   {item.label}
@@ -49,4 +49,3 @@ export function MobileMenu({ items, className }: { items: NavItem[]; className?:
     </div>
   );
 }
-

@@ -11,7 +11,7 @@ export const metadata = {
 function SkillGroup({ title, items }: { title: string; items: string[] }) {
   return (
     <Card>
-      <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">{title}</div>
+      <div className="font-display text-base font-semibold text-white">{title}</div>
       <div className="mt-3 flex flex-wrap gap-2">
         {items.map((item) => (
           <SkillBadge key={item} label={item} />
@@ -43,11 +43,11 @@ export default function SkillsPage() {
         <div className="grid gap-4 md:grid-cols-2">
           <SkillGroup title="Web & platforms" items={resume.skills.webAndPlatforms} />
           <Card>
-            <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">Languages</div>
-            <div className="mt-3 grid gap-2 text-sm text-neutral-700 dark:text-white/70">
+            <div className="font-display text-base font-semibold text-white">Languages</div>
+            <div className="mt-3 grid gap-2 text-sm text-white/70">
               {resume.languages.map((lang) => (
                 <div key={lang.name} className="flex items-center justify-between gap-4">
-                  <span className="font-semibold text-neutral-950 dark:text-white">{lang.name}</span>
+                  <span className="font-semibold text-white">{lang.name}</span>
                   <span>{lang.level}</span>
                 </div>
               ))}
