@@ -5,7 +5,7 @@ import { SkillBadge } from "@/components/sections/SkillBadge";
 
 export const metadata = {
   title: "Skills",
-  description: "Technical skills grouped for recruiter and ATS scanning.",
+  description: "Technical skills grouped for recruiter-friendly scanning.",
 };
 
 function SkillGroup({ title, items }: { title: string; items: string[] }) {
@@ -58,4 +58,3 @@ export default function SkillsPage() {
     </div>
   );
 }
-

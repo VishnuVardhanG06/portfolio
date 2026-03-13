@@ -3,16 +3,16 @@ import { Card } from "@/components/ui/Card";
 
 export const metadata = {
   title: "Blog",
-  description: "Notes and short writeups (optional).",
+  description: "Notes and short writeups.",
 };
 
 export default function BlogPage() {
   return (
     <div>
       <Section
-        eyebrow="Blog"
-        title="Notes (coming soon)"
-        subtitle="A space for short writeups on ML experiments, CV tricks, and geospatial workflows."
+        eyebrow="Writing"
+        title="Notes and short writeups"
+        subtitle="Quick, practical writeups on ML experiments and geospatial workflows."
       >
         <div className="grid gap-4 md:grid-cols-2">
           <Card>
@@ -32,4 +32,3 @@ export default function BlogPage() {
     </div>
   );
 }
-

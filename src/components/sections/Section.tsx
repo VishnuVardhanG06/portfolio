@@ -14,7 +14,7 @@ export function Section({
   className?: string;
 }) {
   return (
-    <section className={cn("py-12 md:py-16", className)}>
+    <section className={cn("py-10 md:py-16", className)}>
       <div className="mx-auto max-w-6xl px-4">
         <div className="mb-8 max-w-3xl">
           {eyebrow ? (
@@ -32,4 +32,3 @@ export function Section({
     </section>
   );
 }
-

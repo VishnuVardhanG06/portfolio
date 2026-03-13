@@ -30,6 +30,13 @@ Open `http://localhost:3000`.
 - Set `NEXT_PUBLIC_SITE_URL` in your environment variables (used for sitemap/robots and canonical URLs)
 - For direct contact form delivery, set `NEXT_PUBLIC_CONTACT_ENDPOINT` to a hosted form endpoint (Formspree, etc.)
 
+### GitHub Pages notes
+
+- User site repo (`<owner>.github.io`): deploys at the domain root, so `NEXT_PUBLIC_BASE_PATH` must be empty.
+- Project site repo (any other repo): deploys under `/<repo>`, so `NEXT_PUBLIC_BASE_PATH` should be `/<repo>`.
+
+The workflow at `.github/workflows/deploy-pages.yml` auto-detects this and sets the right `NEXT_PUBLIC_BASE_PATH`.
+
 ## Optional backend (full stack)
 
 There’s an optional Express + MongoDB backend scaffold under `server/` (not required for the frontend to run).

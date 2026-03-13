@@ -12,7 +12,7 @@ export const metadata = {
 export default function ResumePage() {
   return (
     <div>
-      <Section eyebrow="Resume" title="Resume" subtitle="HTML version for ATS, plus a downloadable PDF.">
+      <Section eyebrow="Resume" title="Resume" subtitle="View online or download the PDF.">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <ButtonLink href="/resume.pdf" target="_blank" rel="noreferrer">
             Download PDF
@@ -99,4 +99,3 @@ export default function ResumePage() {
     </div>
   );
 }
-

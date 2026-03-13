@@ -25,7 +25,5 @@ All components are reusable and live under `src/components`.
 - `ProjectCard` (`src/components/sections/ProjectCard.tsx`): props: `name`, `highlights`, `technologies`, `href?`
 - `SkillBadge` (`src/components/sections/SkillBadge.tsx`): prop: `label`
 - `Timeline` (`src/components/sections/Timeline.tsx`): prop: `items: TimelineItem[]`
-- `TestimonialCarousel` (`src/components/sections/TestimonialCarousel.tsx`): placeholder testimonials, replaceable
 - `ContactForm` (`src/components/sections/ContactForm.tsx`): posts to `/api/contact`
 - `CTAButton` (`src/components/sections/CTAButton.tsx`): re-export of `Button` and `ButtonLink`
-

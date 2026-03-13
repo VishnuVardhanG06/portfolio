@@ -1,7 +1,7 @@
 # UI/UX Layout Plan
 
 ## Home
-- Layout: hero + strengths + featured projects + skills snapshot + testimonials + CTA
+- Layout: hero + strengths + featured projects + skills snapshot + references + CTA
 - Grid: `max-w-6xl`, 12-col on desktop, single column on mobile
 - Motion: hero fade/slide, cards lift on hover, small section transitions
 - Mobile: sticky nav + mobile menu, single-column cards, short copy blocks
@@ -37,4 +37,3 @@
 
 ## Blog (optional)
 - Layout: minimal teaser cards; easy to expand into MDX later
-

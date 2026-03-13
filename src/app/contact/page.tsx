@@ -20,8 +20,7 @@ export default function ContactPage() {
           <Card className="md:col-span-2">
             <div className="font-display text-lg font-semibold text-neutral-950 dark:text-white">Message me</div>
             <p className="mt-2 text-sm text-neutral-700 dark:text-white/70">
-              On GitHub Pages, the form opens your email client by default. If you want direct form delivery, set
-              `NEXT_PUBLIC_CONTACT_ENDPOINT` to a hosted form endpoint (Formspree, etc.).
+              The form can submit to a hosted endpoint if you set `NEXT_PUBLIC_CONTACT_ENDPOINT`. Otherwise it opens your email client.
             </p>
             <div className="mt-5">
               <ContactForm />

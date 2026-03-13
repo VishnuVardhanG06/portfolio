@@ -4,8 +4,8 @@ import { Timeline, type TimelineItem } from "@/components/sections/Timeline";
 import { Card } from "@/components/ui/Card";
 
 export const metadata = {
-  title: "Experience Timeline",
-  description: "Timeline-style view of education, projects, and community involvement.",
+  title: "Timeline",
+  description: "A timeline view of education, projects, and community involvement.",
 };
 
 export default function ExperiencePage() {
@@ -23,27 +23,18 @@ export default function ExperiencePage() {
     ...resume.projects.map((p) => ({
       title: p.name,
       subtitle: "Project work",
-      dates: "Ongoing",
+      dates: "—",
       bullets: p.highlights,
       tags: p.technologies.slice(0, 6),
     })),
-    {
-      title: "Professional experience",
-      subtitle: "Not listed on the CV",
-      dates: "—",
-      bullets: [
-        "No formal industry experience included in the current resume.",
-        "Portfolio highlights emphasize project ownership, research interests, and applied builds.",
-      ],
-    },
   ];
 
   return (
     <div>
       <Section
         eyebrow="Timeline"
-        title="A compact view of my path"
-        subtitle="Education + projects + community involvement in a single scroll."
+        title="Education, projects, and community"
+        subtitle="A single scroll that keeps the signal high."
       >
         <Timeline items={items} />
       </Section>
@@ -60,4 +51,3 @@ export default function ExperiencePage() {
     </div>
   );
 }
-

@@ -3,8 +3,8 @@ import { Hero } from "@/components/sections/Hero";
 import { Section } from "@/components/sections/Section";
 import { ProjectCard } from "@/components/sections/ProjectCard";
 import { SkillBadge } from "@/components/sections/SkillBadge";
-import { TestimonialCarousel } from "@/components/sections/TestimonialCarousel";
 import { ButtonLink } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
 
       <Section
         eyebrow="Core strengths"
-        title="Strong fundamentals, practical builds"
+        title="Strong fundamentals. Practical builds."
         subtitle="A project-first portfolio focused on ML systems, computer vision, and geospatial analysis."
       >
         <div className="grid gap-3 md:grid-cols-3">
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="Featured" title="Projects recruiters can scan fast" subtitle="Clear problem, clear approach, real tooling.">
+      <Section eyebrow="Featured" title="Projects that show end-to-end ownership" subtitle="Clear problem, clear approach, real tooling.">
         <div className="grid gap-4 md:grid-cols-2">
           {resume.projects.slice(0, 4).map((p) => (
             <ProjectCard key={p.slug} name={p.name} highlights={p.highlights} technologies={p.technologies} />
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="Skills" title="Tooling I actually use" subtitle="Grouped for ATS and easy scanning.">
+      <Section eyebrow="Skills" title="Tooling I use" subtitle="Grouped for fast recruiter scanning.">
         <div className="grid gap-4 md:grid-cols-3">
           <div className="rounded-2xl border border-black/10 bg-white/70 p-6 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5">
             <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">Programming</div>
@@ -80,11 +80,34 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="Signal" title="Testimonials (placeholders)" subtitle="Add real quotes as you get them.">
-        <TestimonialCarousel />
+      <Section eyebrow="References" title="References available on request" subtitle="Happy to share contacts or recommendations if needed.">
+        <div className="grid gap-4 md:grid-cols-3">
+          <Card className="md:col-span-2">
+            <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">What you can expect</div>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-neutral-700 dark:text-white/70">
+              <li>Clear communication and structured experimentation.</li>
+              <li>Clean handoffs with reproducible code and results.</li>
+              <li>A bias for practical evaluation and honest metrics.</li>
+            </ul>
+          </Card>
+          <Card>
+            <div className="font-display text-base font-semibold text-neutral-950 dark:text-white">Links</div>
+            <div className="mt-3 space-y-2 text-sm font-semibold text-neutral-700 dark:text-white/70">
+              <a className="block hover:text-neutral-950 dark:hover:text-white" href={resume.links.linkedin} target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+              <a className="block hover:text-neutral-950 dark:hover:text-white" href={resume.links.github} target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+              <a className="block hover:text-neutral-950 dark:hover:text-white" href={`mailto:${resume.contact.email}`}>
+                Email
+              </a>
+            </div>
+          </Card>
+        </div>
       </Section>
 
-      <Section eyebrow="Next" title="Want to collaborate?" subtitle="I’m actively looking for research opportunities and internships.">
+      <Section eyebrow="Next" title="Want to collaborate?" subtitle="Open to research opportunities and internships.">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <ButtonLink href="/contact" size="lg">
             Contact me
