@@ -20,11 +20,15 @@ const navItems: NavItem[] = [
 export function Navbar({ className }: { className?: string }) {
   return (
     <header className={cn("sticky top-0 z-40 border-b border-white/10 bg-black/25 backdrop-blur", className)}>
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+      <div className="mx-auto flex min-h-16 max-w-6xl items-center justify-between px-4 py-3">
         <div className="flex items-center gap-3">
-          <Link href="/" className="group inline-flex items-baseline gap-2">
-            <span className="font-display text-lg font-semibold tracking-tight text-white">{resume.fullName}</span>
-            <span className="hidden text-sm text-white/60 group-hover:text-white/80 md:inline">{resume.title}</span>
+          <Link href="/" className="group flex flex-col leading-tight">
+            <span className="font-display text-base font-semibold tracking-tight text-white sm:text-lg">
+              {resume.fullName}
+            </span>
+            <span className="max-w-[62vw] truncate text-xs font-semibold text-white/60 group-hover:text-white/80 sm:max-w-[42vw] sm:text-sm">
+              {resume.title}
+            </span>
           </Link>
         </div>
 
